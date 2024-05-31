@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pt-br-bkj1611"
+version = "0.1.0"
+description = ""
+authors = ["William Sampaio <56176702+WilliamSampaio@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+beautifulsoup4 = "^4.12.3"
+lxml = "^5.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
