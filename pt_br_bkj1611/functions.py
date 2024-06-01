@@ -1,4 +1,5 @@
 import os
+from zipfile import ZipFile
 
 import requests
 from bs4 import BeautifulSoup
@@ -70,3 +71,10 @@ def rename_files():
             [str(filename.split('_')[0]).zfill(2), filename.split('_')[1]]
         )
         os.rename(f'data/{filename}', f'data/{new_filename}')
+
+
+def zip_bible(filename):
+    with ZipFile(os.path.join(os.getcwd(), f'{filename}.zip'), 'w') as zip:
+        for file in os.listdir('data'):
+            zip.write(os.path.join('data', file))
+    print(f'Bible {filename} zipped successfully!')
