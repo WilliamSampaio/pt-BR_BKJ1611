@@ -1,4 +1,6 @@
 import json
+import os
+import sys
 
 import requests
 from bs4 import BeautifulSoup
@@ -14,7 +16,9 @@ def http_request(url: str):
         req = requests.get(
             url,
             headers={
-                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) '
+                + 'AppleWebKit/537.36 (KHTML, like Gecko) '
+                + 'Chrome/125.0.0.0 Safari/537.36'
             },
         )
     except requests.exceptions.RequestException as e:
@@ -61,7 +65,20 @@ def get_books_slug() -> list:
         raise e
 
 
+def rename_files():
+    for filename in os.listdir('data'):
+        if len(filename.split('_')[0]) == 2:
+            continue
+        new_filename = '_'.join(
+            [str(filename.split('_')[0]).zfill(2), filename.split('_')[1]]
+        )
+        os.rename(f'data/{filename}', f'data/{new_filename}')
+
+
 if __name__ == '__main__':
+
+    # rename_files()
+    # sys.exit()
 
     books = get_books_slug()
     if books is None:
