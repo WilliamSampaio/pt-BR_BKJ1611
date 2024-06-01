@@ -1,11 +1,13 @@
 import json
 import os
-import sys
 
 import requests
 from bs4 import BeautifulSoup
 from lxml import etree
 from unidecode import unidecode
+
+# import sys
+
 
 BASE_URL = 'https://bkjfiel.com.br/'
 
