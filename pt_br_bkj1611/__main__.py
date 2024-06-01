@@ -56,3 +56,5 @@ for book_index in range(0, len(books)):
             f'data/{str(book_index + 1).zfill(2)}_{chapter}.json', 'w'
         ) as f:
             f.write(json.dumps(data))
+
+    print(books[book_index])
