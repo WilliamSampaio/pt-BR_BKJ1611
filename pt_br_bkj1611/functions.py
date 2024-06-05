@@ -1,11 +1,13 @@
+import json
 import os
+from datetime import datetime
 from zipfile import ZipFile
 
 import requests
 from bs4 import BeautifulSoup
 from lxml import etree
 
-from pt_br_bkj1611 import BASE_URL
+from pt_br_bkj1611 import BASE_URL, USER_AGENT
 
 
 def http_request(url: str):
@@ -13,11 +15,7 @@ def http_request(url: str):
     try:
         req = requests.get(
             url,
-            headers={
-                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) '
-                + 'AppleWebKit/537.36 (KHTML, like Gecko) '
-                + 'Chrome/125.0.0.0 Safari/537.36'
-            },
+            headers={'User-Agent': USER_AGENT},
         )
     except requests.exceptions.RequestException as e:
         print(e)
@@ -71,6 +69,35 @@ def rename_files():
             [str(filename.split('_')[0]).zfill(2), filename.split('_')[1]]
         )
         os.rename(f'data/{filename}', f'data/{new_filename}')
+
+
+def write_index():
+    if os.path.exists(os.path.join('data', '00.json')):
+        index = None
+        with open(os.path.join('data', '00.json')) as f:
+            index = json.load(f)
+    else:
+        index = {
+            'bible': '',
+            'slug': '',
+            'lang': '',
+            'url_from': BASE_URL,
+            'scraping_date': None,
+        }
+    filenames = os.listdir('data')
+    filenames.sort()
+    index['books'] = {}
+    for filename in filenames:
+        if filename == '00.json':
+            continue
+        if filename.split('_')[0] in index['books']:
+            continue
+        with open(os.path.join('data', filename)) as f:
+            data = json.load(f)
+            index['books'][filename.split('_')[0]] = data['book']
+    with open(os.path.join('data', '00.json'), 'w') as f:
+        index['scraping_date'] = datetime.today().strftime('%Y-%m-%d')
+        f.write(json.dumps(index, indent=4))
 
 
 def zip_bible(filename):

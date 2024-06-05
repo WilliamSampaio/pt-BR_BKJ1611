@@ -3,7 +3,12 @@ import json
 from unidecode import unidecode
 
 from pt_br_bkj1611 import BASE_URL
-from pt_br_bkj1611.functions import get_books_slug, get_soup, zip_bible
+from pt_br_bkj1611.functions import (
+    get_books_slug,
+    get_soup,
+    write_index,
+    zip_bible,
+)
 
 # import sys
 
@@ -59,4 +64,5 @@ for book_index in range(0, len(books)):
 
     print(books[book_index])
 
+write_index()
 zip_bible('pt-BR_BKJ1611')
