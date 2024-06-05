@@ -10,13 +10,6 @@ from pt_br_bkj1611.functions import (
     zip_bible,
 )
 
-# import sys
-
-
-# rename_files()
-# print('oi!')
-# sys.exit()
-
 books = get_books_slug()
 if books is None:
     raise Exception
