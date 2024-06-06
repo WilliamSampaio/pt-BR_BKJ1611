@@ -3,73 +3,271 @@
     "slug": "BKJ1611",
     "lang": "pt-BR",
     "url_from": "https://bkjfiel.com.br/",
-    "scraping_date": "2024-06-05",
+    "scraping_date": "2024-06-06",
     "books": {
-        "01": "G\u00eanesis",
-        "02": "\u00caxodo",
-        "03": "Lev\u00edtico",
-        "04": "N\u00fameros",
-        "05": "Deuteron\u00f4mio",
-        "06": "Josu\u00e9",
-        "07": "Ju\u00edzes",
-        "08": "Rute",
-        "09": "1 Samuel",
-        "10": "2 Samuel",
-        "11": "1 Reis",
-        "12": "2 Reis",
-        "13": "1 Cr\u00f4nicas",
-        "14": "2 Cr\u00f4nicas",
-        "15": "Esdras",
-        "16": "Neemias",
-        "17": "Ester",
-        "18": "J\u00f3",
-        "19": "Salmos",
-        "20": "Prov\u00e9rbios",
-        "21": "Eclesiastes",
-        "22": "Cantares de Salom\u00e3o",
-        "23": "Isa\u00edas",
-        "24": "Jeremias",
-        "25": "Lamenta\u00e7\u00f5es",
-        "26": "Ezequiel",
-        "27": "Daniel",
-        "28": "Os\u00e9ias",
-        "29": "Joel",
-        "30": "Am\u00f3s",
-        "31": "Obadias",
-        "32": "Jonas",
-        "33": "Miqu\u00e9ias",
-        "34": "Naum",
-        "35": "Habacuque",
-        "36": "Sofonias",
-        "37": "Ageu",
-        "38": "Zacarias",
-        "39": "Malaquias",
-        "40": "Mateus",
-        "41": "Marcos",
-        "42": "Lucas",
-        "43": "Jo\u00e3o",
-        "44": "Atos dos Ap\u00f3stolos",
-        "45": "Romanos",
-        "46": "1 Cor\u00edntios",
-        "47": "2 Cor\u00edntios",
-        "48": "G\u00e1latas",
-        "49": "Ef\u00e9sios",
-        "50": "Filipenses",
-        "51": "Colossenses",
-        "52": "1 Tessalonicenses",
-        "53": "2 Tessalonicenses",
-        "54": "1 Tim\u00f3teo",
-        "55": "2 Tim\u00f3teo",
-        "56": "Tito",
-        "57": "Filemom",
-        "58": "Hebreus",
-        "59": "Tiago",
-        "60": "1 Pedro",
-        "61": "2 Pedro",
-        "62": "1 Jo\u00e3o",
-        "63": "2 Jo\u00e3o",
-        "64": "3 Jo\u00e3o",
-        "65": "Judas",
-        "66": "Apocalipse"
+        "01": [
+            "G\u00eanesis",
+            50
+        ],
+        "02": [
+            "\u00caxodo",
+            40
+        ],
+        "03": [
+            "Lev\u00edtico",
+            27
+        ],
+        "04": [
+            "N\u00fameros",
+            36
+        ],
+        "05": [
+            "Deuteron\u00f4mio",
+            34
+        ],
+        "06": [
+            "Josu\u00e9",
+            24
+        ],
+        "07": [
+            "Ju\u00edzes",
+            21
+        ],
+        "08": [
+            "Rute",
+            4
+        ],
+        "09": [
+            "1 Samuel",
+            31
+        ],
+        "10": [
+            "2 Samuel",
+            24
+        ],
+        "11": [
+            "1 Reis",
+            22
+        ],
+        "12": [
+            "2 Reis",
+            25
+        ],
+        "13": [
+            "1 Cr\u00f4nicas",
+            29
+        ],
+        "14": [
+            "2 Cr\u00f4nicas",
+            36
+        ],
+        "15": [
+            "Esdras",
+            10
+        ],
+        "16": [
+            "Neemias",
+            13
+        ],
+        "17": [
+            "Ester",
+            10
+        ],
+        "18": [
+            "J\u00f3",
+            42
+        ],
+        "19": [
+            "Salmos",
+            150
+        ],
+        "20": [
+            "Prov\u00e9rbios",
+            31
+        ],
+        "21": [
+            "Eclesiastes",
+            12
+        ],
+        "22": [
+            "Cantares de Salom\u00e3o",
+            8
+        ],
+        "23": [
+            "Isa\u00edas",
+            66
+        ],
+        "24": [
+            "Jeremias",
+            52
+        ],
+        "25": [
+            "Lamenta\u00e7\u00f5es",
+            5
+        ],
+        "26": [
+            "Ezequiel",
+            48
+        ],
+        "27": [
+            "Daniel",
+            12
+        ],
+        "28": [
+            "Os\u00e9ias",
+            14
+        ],
+        "29": [
+            "Joel",
+            3
+        ],
+        "30": [
+            "Am\u00f3s",
+            9
+        ],
+        "31": [
+            "Obadias",
+            1
+        ],
+        "32": [
+            "Jonas",
+            4
+        ],
+        "33": [
+            "Miqu\u00e9ias",
+            7
+        ],
+        "34": [
+            "Naum",
+            3
+        ],
+        "35": [
+            "Habacuque",
+            3
+        ],
+        "36": [
+            "Sofonias",
+            3
+        ],
+        "37": [
+            "Ageu",
+            2
+        ],
+        "38": [
+            "Zacarias",
+            14
+        ],
+        "39": [
+            "Malaquias",
+            4
+        ],
+        "40": [
+            "Mateus",
+            28
+        ],
+        "41": [
+            "Marcos",
+            16
+        ],
+        "42": [
+            "Lucas",
+            24
+        ],
+        "43": [
+            "Jo\u00e3o",
+            21
+        ],
+        "44": [
+            "Atos dos Ap\u00f3stolos",
+            28
+        ],
+        "45": [
+            "Romanos",
+            16
+        ],
+        "46": [
+            "1 Cor\u00edntios",
+            16
+        ],
+        "47": [
+            "2 Cor\u00edntios",
+            13
+        ],
+        "48": [
+            "G\u00e1latas",
+            6
+        ],
+        "49": [
+            "Ef\u00e9sios",
+            6
+        ],
+        "50": [
+            "Filipenses",
+            4
+        ],
+        "51": [
+            "Colossenses",
+            4
+        ],
+        "52": [
+            "1 Tessalonicenses",
+            5
+        ],
+        "53": [
+            "2 Tessalonicenses",
+            3
+        ],
+        "54": [
+            "1 Tim\u00f3teo",
+            6
+        ],
+        "55": [
+            "2 Tim\u00f3teo",
+            4
+        ],
+        "56": [
+            "Tito",
+            3
+        ],
+        "57": [
+            "Filemom",
+            1
+        ],
+        "58": [
+            "Hebreus",
+            13
+        ],
+        "59": [
+            "Tiago",
+            5
+        ],
+        "60": [
+            "1 Pedro",
+            5
+        ],
+        "61": [
+            "2 Pedro",
+            3
+        ],
+        "62": [
+            "1 Jo\u00e3o",
+            5
+        ],
+        "63": [
+            "2 Jo\u00e3o",
+            1
+        ],
+        "64": [
+            "3 Jo\u00e3o",
+            1
+        ],
+        "65": [
+            "Judas",
+            1
+        ],
+        "66": [
+            "Apocalipse",
+            22
+        ]
     }
 }

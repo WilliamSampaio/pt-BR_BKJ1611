@@ -71,6 +71,14 @@ def rename_files():
         os.rename(f'data/{filename}', f'data/{new_filename}')
 
 
+def count_chapters(book_id: str, filenames: list[str]):
+    count = 0
+    for filename in filenames:
+        if f'{book_id}_' in filename:
+            count = count + 1
+    return count
+
+
 def write_index():
     if os.path.exists(os.path.join('data', '00.json')):
         index = None
@@ -94,7 +102,10 @@ def write_index():
             continue
         with open(os.path.join('data', filename)) as f:
             data = json.load(f)
-            index['books'][filename.split('_')[0]] = data['book']
+            index['books'][filename.split('_')[0]] = [
+                data['book'],
+                count_chapters(filename.split('_')[0], filenames),
+            ]
     with open(os.path.join('data', '00.json'), 'w') as f:
         index['scraping_date'] = datetime.today().strftime('%Y-%m-%d')
         f.write(json.dumps(index, indent=4))
